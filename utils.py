@@ -72,7 +72,7 @@ def video_parser(video_path: str):
 def clean_frame(frame_times, ankle_y_coords):
     # Data cleaning: identifying jump intervals
     y_diff = np.diff(ankle_y_coords)  # Calculate the change in adjacent points
-    jump_start = np.where(y_diff > 5)[0][0]  # Find the first obvious point of increase
+    jump_start = np.where(y_diff > 15)[0][0]  # Find the first obvious point of increase
     jump_end = np.where(ankle_y_coords[jump_start:] < ankle_y_coords[jump_start])[0][0] + jump_start
 
     filtered_times = frame_times[jump_start:jump_end]
