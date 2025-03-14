@@ -11,7 +11,7 @@ if __name__ == '__main__':
     x_data, y_data, filtered_times, filtered_heights = clean_frame(frame_times, ankle_y_coords)
     # Fit the relationship between h and t based on a quadratic function
     coeffs, fit_times, fit_heights = fit_data(x_data, y_data, filtered_times)
-    # duration of passage
+    # Flight time
     duration = fit_times[-1]-fit_times[0]
     # Jumping height(cm)
     height = cal_height(duration)
@@ -25,7 +25,7 @@ if __name__ == '__main__':
     plt.legend()
     plt.grid()
     plt.text(0.3, 0.1, f"Estimated Jump Height: {height:.2f} cm", fontsize=12, ha='left', color='red')
-    plt.text(0.8, 0.1, f"Duration of Passage: {duration:.2f} s", fontsize=12, ha='left', color='green')
+    plt.text(0.8, 0.1, f"Flight Time: {duration:.2f} s", fontsize=12, ha='left', color='green')
     print(
         f'\nEstimated Jump Height: {height:.2f} cm',
         f'\nDuration of Passage: {duration:.2f} s'
