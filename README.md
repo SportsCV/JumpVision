@@ -24,8 +24,15 @@ pip install -r requirements.txt
 python main.py
 ```
 3. View the output jump height and hang time.
-![img.png](demo_result.png)
 
+> 78.71cm
+
+![img.png](demo_result.png)
+4. Compared with MY-JUMP-LAB APP
+
+> 76.34cm
+
+![img.png](my_jump_lab.png)
 ## How It Works
 1. Keypoint Detection: Uses a pose estimation model to track the ankle position.
 2. Jump Segmentation: Filters the frames to extract the jump phase.

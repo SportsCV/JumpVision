@@ -21,7 +21,16 @@ pip install -r requirements.txt
 python main.py
 ```
 3. 查看输出跳跃高度和滞空时间。
+
+> 78.71cm
+
 ![img.png](demo_result.png)
+
+4. 对比 MY-JUMP-LAB APP
+
+> 76.34cm
+
+![img.png](my_jump_lab.png)
 ## 它是如何工作的
 1. 关键点检测：使用姿势估计模型来跟踪脚踝位置。
 2. 跳跃分割：过滤帧以提取跳跃相位。
