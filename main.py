@@ -6,7 +6,7 @@ from utils import video_parser, clean_frame, fit_data, cal_height
 
 if __name__ == '__main__':
     # test video
-    video_path = 'demo1.mp4'
+    video_path = 'demo.mp4'
     # parse key points
     frame_times, ankle_y_coords = video_parser(video_path)
     # Extract the start and end frames of the jump
